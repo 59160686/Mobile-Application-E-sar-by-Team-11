@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>
+      <h2>ข้อมูลผู้ใช้งาน</h2>
+    </ion-title>
+    <ion-buttons right>
+        <button ion-button>
+          <ion-icon name="ios-log-out-outline" style="zoom:3.0;"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div id='layout'>
+    <ion-row>
+      <ion-col col-12 style="text-align: center;">
+        <ion-icon name="contact" style='font-size: 100px; ' color="primary"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 style="text-align: center;">
+        <h2 style="color: #488aff;">ชื่อ : นายมาโนชญ์ ใจกว้าง</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 style="text-align: center;">
+        <h2 style="color: #488aff;">ตำแหน่ง : ผู้ดูแลระบบ</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 style="text-align: center;">
+        <h2 style="color: #488aff;">E-mail : manotej@go.buu.ac.th</h2>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 style="text-align: center;">
+        <h2 style="color: #488aff;">เบอร์โทรศัพท์ : 089-996-xxxx</h2>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title text-center>
+      <ion-buttons center>
+        <button ion-button (click)="popToHomePage()">
+          <ion-icon ios="ios-home" md="md-home" style="zoom:3.0;"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

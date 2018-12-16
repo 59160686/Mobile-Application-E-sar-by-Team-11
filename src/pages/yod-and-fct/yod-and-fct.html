@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title text-center>
+      <h2>ข้อมูลภายในองค์กร</h2>
+    </ion-title>
+    <ion-buttons right>
+      <button ion-button>
+        <ion-icon name="ios-log-out-outline" style="zoom:3.0;"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-toolbar>
+    <ion-searchbar placeholder="Search" [(ngModel)]="queryText">
+    </ion-searchbar>
+  </ion-toolbar>
+  <ion-toolbar style="background-color : white;">
+    <ion-segment [(ngModel)]="relationship" color="primary">
+      <ion-segment-button value="friends">
+        <h2>คณะ </h2>
+      </ion-segment-button>
+      <ion-segment-button value="enemies">
+          <h2>ปีข้อมูล</h2>
+      </ion-segment-button>
+    </ion-segment>
+    <ion-list>
+
+        <ion-item-sliding #item>
+          <button ion-item >
+            <ion-label color="primary"> คณะวิทยาการสารสนเทศ</ion-label>
+          </button>
+    
+          <ion-item-options side="right">
+            <button ion-button style="background-color :#FFCC00">
+              <ion-icon ios="ios-create" md="md-create"></ion-icon>
+              Edit
+            </button>
+            <button ion-button color="danger">
+              <ion-icon name="trash"></ion-icon>
+              Delete
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+    
+        <ion-item-sliding>
+          <button ion-item>
+            <ion-label color="primary">  คณะสหเวชศาสตร์</ion-label>
+          </button>
+    
+          <ion-item-options side="right">
+            <button ion-button style="background-color :#FFCC00">
+              <ion-icon ios="ios-create" md="md-create"></ion-icon>
+              Edit
+            </button>
+            <button ion-button color="danger">
+              <ion-icon name="trash"></ion-icon>
+              Delete
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+        <ion-item-sliding>
+          <button ion-item>
+            <ion-label color="primary">  คณะเภสัชศาสตร์</ion-label>
+          </button>
+          <ion-item-options side="right">
+            <button ion-button style="background-color :#FFCC00">
+              <ion-icon ios="ios-create" md="md-create"></ion-icon>
+              Edit
+            </button>
+            <button ion-button color="danger">
+              <ion-icon name="trash"></ion-icon>
+              Delete
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+    
+    
+      </ion-list>
+      
+  </ion-toolbar>
+
+  <ion-fab bottom right>
+      <button ion-fab color='primary' (click)='pushAddFct()'>
+        <ion-icon ios="ios-add" md="md-add"></ion-icon>
+      </button>
+    </ion-fab>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title text-center>
+      <ion-buttons center>
+        <button ion-button (click)="popToHomePage()">
+          <ion-icon ios="ios-home" md="md-home" style="zoom:3.0;"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
