@@ -30,6 +30,8 @@ import { EditDepartmentPage } from '../pages/edit-department/edit-department';
 import { EditFacultyPage } from '../pages/edit-faculty/edit-faculty';
 import { EditMajorPage } from '../pages/edit-major/edit-major';
 
+import { ListMajorPage } from '../pages/list-major/list-major';
+
 import { ApiGencodePage } from '../pages/api-gencode/api-gencode';
 import { ApiListCodePage } from '../pages/api-list-code/api-list-code';
 import { ApiDetailCodePage } from '../pages/api-detail-code/api-detail-code';
@@ -68,7 +70,8 @@ import { MYearProvider } from '../providers/m-year/m-year';
     EditMajorPage,
     ApiGencodePage,
     ApiListCodePage,
-    ApiDetailCodePage
+    ApiDetailCodePage,
+    ListMajorPage
   ],
   imports: [
     BrowserModule,
@@ -101,7 +104,8 @@ import { MYearProvider } from '../providers/m-year/m-year';
     EditMajorPage,
     ApiGencodePage,
     ApiListCodePage,
-    ApiDetailCodePage
+    ApiDetailCodePage,
+    ListMajorPage
   ],
   providers: [
     StatusBar,
