@@ -21,7 +21,7 @@
 
   <ion-row>
     <ion-col col-6>
-      <ion-card style=" height: 100%; background-color:#FFFF00;" (click)='pushDashBoard()'>
+      <ion-card style=" height: 100%; background-color:#FFFF00;" (click)='pushDashBoard();'>
         <div class="card-title text-center" style="vertical-align: middle;">
           <h2>Dash Board</h2>
         </div>
@@ -33,7 +33,7 @@
     <ion-col col-6>
       <ion-row>
         <ion-col col-12>
-          <ion-card style=" height: 100%;background-color:#FF6600;" (click)='pushDepartment()'>
+          <ion-card style=" height: 100%;background-color:#FF6600;" (click)='pushDepartment();'>
             <div class="card-title">ข้อมูลพื้นฐาน</div>
             <img style="display: block; margin-left: auto; margin-right: auto;" src="assets/imgs/icon_data-structures-and-algorithms.png"
               width="42" />
@@ -43,7 +43,7 @@
       </ion-row>
       <ion-row>
         <ion-col col-12>
-          <ion-card style=" height: 100%; background-color:#00FF33;">
+          <ion-card style=" height: 100%; background-color:#00FF33;" >
             <div class="card-title">ข้อมูล Common Data Set</div>
             <img style=" display: block; margin-left: auto; margin-right: auto;" src="assets/imgs/database-icon-flat-vector-13637051.jpg"
               width="42" />
@@ -55,7 +55,7 @@
   </ion-row>
   <ion-row>
     <ion-col col-12>
-      <ion-card style=" height: 100%; background-color:#CC33FF;">
+      <ion-card style=" height: 100%; background-color:#CC33FF;" (click)='pushGenapi();'>
         <div class="card-title">แสดง Code API </div>
         <!-- <ion-img style="width: 80px; height: 80px;" src="icon_data-structures-and-algorithms.png"></ion-img> -->
         <img style="width: 40%; display: block; margin-left: auto; margin-right: auto;" src="assets/imgs/icon_data-structures-and-algorithms.png"

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { HttpModule } from '@angular/http';
 
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
@@ -28,6 +29,18 @@ import { EditCorsePage } from '../pages/edit-corse/edit-corse';
 import { EditDepartmentPage } from '../pages/edit-department/edit-department';
 import { EditFacultyPage } from '../pages/edit-faculty/edit-faculty';
 import { EditMajorPage } from '../pages/edit-major/edit-major';
+
+import { ApiGencodePage } from '../pages/api-gencode/api-gencode';
+import { ApiListCodePage } from '../pages/api-list-code/api-list-code';
+import { ApiDetailCodePage } from '../pages/api-detail-code/api-detail-code';
+
+import { MDepartmentProvider } from '../providers/m-department/m-department';
+import { MRelationCommonDataProvider } from '../providers/m-relation-common-data/m-relation-common-data';
+import { MCourseProvider } from '../providers/m-course/m-course';
+import { MFacultyProvider } from '../providers/m-faculty/m-faculty';
+import { MMajorProvider } from '../providers/m-major/m-major';
+import { MYearProvider } from '../providers/m-year/m-year';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -52,11 +65,15 @@ import { EditMajorPage } from '../pages/edit-major/edit-major';
     EditCorsePage,
     EditDepartmentPage,
     EditFacultyPage,
-    EditMajorPage
+    EditMajorPage,
+    ApiGencodePage,
+    ApiListCodePage,
+    ApiDetailCodePage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -81,12 +98,21 @@ import { EditMajorPage } from '../pages/edit-major/edit-major';
     EditCorsePage,
     EditDepartmentPage,
     EditFacultyPage,
-    EditMajorPage
+    EditMajorPage,
+    ApiGencodePage,
+    ApiListCodePage,
+    ApiDetailCodePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    MDepartmentProvider,
+    MRelationCommonDataProvider,
+    MCourseProvider,
+    MFacultyProvider,
+    MMajorProvider,
+    MYearProvider
   ]
 })
 export class AppModule {}

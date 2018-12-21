@@ -1,18 +1,67 @@
-<!--
-  Generated template for the EditDepartmentPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>edit-department</ion-title>
+  <ion-navbar color="primary">
+    <ion-title text-center>
+      <h2>แก้ไของค์กร</h2>
+    </ion-title>
+    <ion-buttons right>
+      <button ion-button>
+        <ion-icon name="ios-log-out-outline" style="zoom:3.0;"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
+  <div id='layout'>
 
+
+    <ion-row>
+
+      <ion-col col-12>
+
+        <ion-list>
+          <ion-item>
+            <ion-label color="primary" stacked>รหัสองค์กร</ion-label>
+            <ion-input type="text" (input)="set_dpm_code($event.target.value)" value='12345678'></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label color="primary" stacked>ชื่อองค์กร</ion-label>
+            <ion-input type="text" (input)="set_dpm_name($event.target.value)" value='จุฬาลงกรณ์'></ion-input>
+          </ion-item>
+
+        </ion-list>
+
+        <!-- 
+        <ion-item>
+          <ion-label color="primary" stacked>รหัสองค์กร</ion-label>
+          <ion-input [(ngModel)]="dpm_code" type="text" placeholder="กรุณากรอกรหัสองค์กร"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" stacked>ชื่อองค์กร</ion-label>
+          <ion-input [(ngModel)]="dpm_name" type="text" placeholder="กรุณากรอกชื่อองค์กร"></ion-input>
+        </ion-item>
+ -->
+
+      </ion-col>
+    </ion-row>
+
+    <ion-buttons bottom class='fix_bottom'>
+
+      <button ion-button block color='addbutton' (click)='insert()'>
+        บันทึก
+      </button>
+    </ion-buttons>
+  </div>
 </ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title text-center>
+      <ion-buttons center>
+        <button ion-button (click)="popToHomePage()">
+          <ion-icon ios="ios-home" md="md-home" style="zoom:3.0;"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

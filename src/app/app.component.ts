@@ -1,9 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 
 import { Platform, MenuController, Nav } from 'ionic-angular';
-
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ListPage } from '../pages/list/list';
+import { DashBoardPage } from '../pages/dash-board/dash-board';
+import { DepartmentPage } from '../pages/department/department';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,7 +17,7 @@ export class MyApp {
 
   // make HelloIonicPage the root (or first) page
   rootPage = HelloIonicPage;
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any ,icon : string}>;
 
   constructor(
     public platform: Platform,
@@ -29,8 +29,10 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage }
+      { title: 'DashBoard', component: DashBoardPage ,icon : 'podium' },
+      { title: 'ข้อมูลพื้นฐาน', component: DepartmentPage ,icon : 'list-box'},
+      { title: 'ข้อมูล Comon Data Set', component: DepartmentPage ,icon : 'ios-link' },
+      { title: 'แสดง Code Api', component: DepartmentPage ,icon : 'ios-code-download'},
     ];
   }
 
@@ -48,6 +50,7 @@ export class MyApp {
     // close the menu when clicking a link from the menu
     this.menu.close();
     // navigate to the new page if it is not the current page
-    this.nav.setRoot(page.component);
+    this.nav.push(page.component);
+    //this.nav.setRoot(page.component);
   }
 }

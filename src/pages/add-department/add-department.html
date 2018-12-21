@@ -13,26 +13,42 @@
 
 <ion-content padding>
   <div id='layout'>
+
+
     <ion-row>
+
       <ion-col col-12>
+
         <ion-list>
           <ion-item>
             <ion-label color="primary" stacked>รหัสองค์กร</ion-label>
-            <ion-input type="password" placeholder="กรุณากรอกรหัสองค์กร"></ion-input>
+            <ion-input type="text" (input)="set_dpm_code($event.target.value)"></ion-input>
           </ion-item>
-
           <ion-item>
             <ion-label color="primary" stacked>ชื่อองค์กร</ion-label>
-            <ion-input type="password" placeholder="กรุณากรอกชื่อองค์กร"></ion-input>
+            <ion-input type="text" (input)="set_dpm_name($event.target.value)"></ion-input>
           </ion-item>
-          
+
         </ion-list>
+
+        <!-- 
+        <ion-item>
+          <ion-label color="primary" stacked>รหัสองค์กร</ion-label>
+          <ion-input [(ngModel)]="dpm_code" type="text" placeholder="กรุณากรอกรหัสองค์กร"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" stacked>ชื่อองค์กร</ion-label>
+          <ion-input [(ngModel)]="dpm_name" type="text" placeholder="กรุณากรอกชื่อองค์กร"></ion-input>
+        </ion-item>
+ -->
+
       </ion-col>
     </ion-row>
 
     <ion-buttons bottom class='fix_bottom'>
 
-      <button ion-button block color='addbutton'>
+      <button ion-button block color='addbutton' (click)='insert()'>
         บันทึก
       </button>
     </ion-buttons>

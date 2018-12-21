@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { GencodePage } from './gencode';
+import { ApiShowPage } from './api-show';
 
 @NgModule({
   declarations: [
-    GencodePage,
+    ApiShowPage,
   ],
   imports: [
-    IonicPageModule.forChild(GencodePage),
+    IonicPageModule.forChild(ApiShowPage),
   ],
 })
-export class GencodePageModule {}
+export class ApiShowPageModule {}

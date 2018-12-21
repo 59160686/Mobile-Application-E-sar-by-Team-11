@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the GencodePage page.
+ * Generated class for the ApiShowPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-gencode',
-  templateUrl: 'gencode.html',
+  selector: 'page-api-show',
+  templateUrl: 'api-show.html',
 })
-export class GencodePage {
+export class ApiShowPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad GencodePage');
+    console.log('ionViewDidLoad ApiShowPage');
   }
 
 }
